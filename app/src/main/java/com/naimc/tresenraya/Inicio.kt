@@ -1,7 +1,6 @@
 package com.naimc.tresenraya
 
 import android.annotation.SuppressLint
-import android.icu.text.CaseMap.Title
 import androidx.compose.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -45,14 +44,14 @@ class Inicio() {
                             0.dp, 0.dp
                         )
                     ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.play),
-                            contentDescription = "play"
-                        )
+
                         Text(text = "Jugar")
                     }
                 }
             }
+        } else {
+            val game: Game = Game()
+            game.gameUI()
         }
     }
 
